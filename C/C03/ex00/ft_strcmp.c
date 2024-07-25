@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 07:06:09 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/23 08:55:36 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/07/24 16:36:52 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_strcmp(char *s1, char *s2)
 	while (s1[i] && s2[i])
 	{
 		if (s1[i] != s2[i])
-			break;
+			break ;
 		i++;
 	}
 	return (s1[i] - s2[i]);

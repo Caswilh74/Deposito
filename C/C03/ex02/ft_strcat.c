@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:06:56 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/24 13:22:05 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/07/24 16:38:09 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strcat(char	*dest, char	*src)
 {
 	int	i;
 	int	count;
-	
+
 	count = 0;
 	while (dest[count])
 	{
