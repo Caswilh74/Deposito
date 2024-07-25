@@ -1,2 +1,2 @@
 #!/bin/bash
-id $FT_USER -G -n | tr ' ' ',' | tr -d '\n'
+id $FT_USER --groups --name | tr " " "," | tr -d '\n'
