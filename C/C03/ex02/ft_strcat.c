@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:06:56 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/24 16:38:09 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/07/27 14:20:05 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ char	*ft_strcat(char	*dest, char	*src)
 		i++;
 		count++;
 	}
+	dest[count] = '\0';
 	return (dest);
 }
 /*

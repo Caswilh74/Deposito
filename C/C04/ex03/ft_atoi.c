@@ -1,34 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/25 10:32:38 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/27 13:24:47 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/07/27 16:04:25 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/07/27 16:04:41 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-
-int	ft_strlen(char	*str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
-/*
-int	main(void)
-{
-	char	*str;
-
-	str = "Brazil = Greatest Country";
-	printf("%s\n", str);
-	printf("%i\n", ft_strlen(str));
-	return (0);
-}
-*/

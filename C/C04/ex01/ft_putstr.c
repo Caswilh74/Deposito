@@ -1,51 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/17 13:29:34 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/26 11:25:33 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/07/27 13:27:47 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/07/27 13:54:26 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
-/*
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-*/
-void	ft_rev_int_tab(int *tab, int size)
+
+void	ft_putstr(char	*str)
 {
 	int	i;
-	int	swap;
 
 	i = 0;
-	while (i < size / 2)
+	while (str[i] != '\0')
 	{
-		swap = tab[i];
-		tab[i] = tab[size -1 - i];
-		tab[size -1 - i] = swap;
-		i ++;
+		i++;
 	}
+	write(1, str, i);
 }
 /*
-int	main(void)
+int	main()
 {
-	int	size;
-	int	count;
-	int inicio[6] = {0,1,2,3,4,5};	
+	char *str;
 	
-	size = 6;	
-	ft_rev_int_tab(inicio, size);
-	count = 0;
-	while (count < size)
-	{
-		ft_putchar(48 + inicio[count]);
-		count++;
-	}
+	str = "Hello Evaluator";
+	ft_putstr(str);
 	return (0);
 }
 */
