@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 13:58:02 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/28 14:06:58 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/07/29 07:06:49 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,20 +18,18 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void 	ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
 	if (nb == -2147483648)
 	{
 		write(1, "-2147483648", 11);
-		return;
+		return ;
 	}
-	
 	else if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;
 	}
-	
 	if (nb > 9 || nb == 2147483647)
 	{
 		ft_putnbr(nb / 10);

@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/23 14:06:56 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/28 14:34:21 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/07/29 11:14:26 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/07/29 14:51:15 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdio.h>
 
-char	*ft_strcat(char	*dest, char	*src)
+int	ft_iterative_power(int	nb, int	power)
 {
-	int	i;
-	int	count;
-
-	count = 0;
-	while (dest[count])
-	{
-		count++;
+	int	res;
+	
+	res = 1;
+	if(power < 0)
+		return (0);
+	while (power > 0)
+	{	res *= nb;
+		power--;		
 	}
-	i = 0;
-	while (src[i])
-	{
-		dest[count] = src[i];
-		i++;
-		count++;
-	}
-	dest[count] = '\0';
-	return (dest);
+	return(res);
 }
 /*
 int	main(void)
 {
-	char	dest[] = "Gustavo ";
-	char	src[] = "Castilho!";
-	printf("dest: %s\n", src);
-	printf("src: %s\n", dest);
-	printf("strcat: %s\n", ft_strcat(dest, src));
+	printf("res: %i",ft_iterative_power(3,5));
 	return (0);
 }
 */
