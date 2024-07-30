@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/29 15:30:57 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/29 17:11:09 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/07/30 13:22:47 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_fibonacci(int index)
 		return (-1);
 	if (index < 2)
 		return (index);
-	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));		
+	return (ft_fibonacci(index - 2) + ft_fibonacci(index - 1));
 }
 /*
 int	main(void)
