@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 08:32:46 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/22 09:16:15 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/08/01 09:22:08 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_strcpy(char	*dest, char	*src)
 	dest[i] = '\0';
 	return (dest);
 }
-/*
+
 int	main()
 {
 	char	src[] = "Hello Jhony!";
@@ -39,4 +39,4 @@ int	main()
 
 	return 0;
 }
-*/
+

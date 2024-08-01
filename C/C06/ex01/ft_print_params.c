@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_params.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: issousa <issousa@student.42luxembourg.l    +#+  +:+       +#+        */
+/*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/24 15:11:34 by issousa           #+#    #+#             */
-/*   Updated: 2024/07/28 14:58:15 by issousa          ###   ########.fr       */
+/*   Created: 2024/07/31 16:16:07 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/07/31 16:22:30 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

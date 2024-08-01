@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 12:56:47 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/23 10:38:02 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/08/01 09:25:50 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,10 @@ int	ft_str_is_alpha(char *str)
 	}
 	return (1);
 }
-/*
+
 int main(void)
 {
 	char string[] = "AaZz";
 	printf("%d\n", ft_str_is_alpha(string));
 	return (0);
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:06:56 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/28 14:34:21 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/08/01 12:47:21 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strcat(char	*dest, char	*src)
 	dest[count] = '\0';
 	return (dest);
 }
-/*
+
 int	main(void)
 {
 	char	dest[] = "Gustavo ";
@@ -43,4 +43,3 @@ int	main(void)
 	printf("strcat: %s\n", ft_strcat(dest, src));
 	return (0);
 }
-*/
