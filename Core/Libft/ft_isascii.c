@@ -6,13 +6,13 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:16:02 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/21 14:56:43 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/23 10:19:42 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isascii(int	c)
+int	ft_isascii(int c)
 {
 	return (c >= 0 && c <= 127);
 }

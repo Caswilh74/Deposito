@@ -6,13 +6,13 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:30:28 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/21 14:39:23 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/23 10:19:45 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int	c)
+int	ft_isdigit(int c)
 {
 	return (c >= 48 && c <= 57);
 }

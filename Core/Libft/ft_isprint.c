@@ -6,13 +6,13 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 14:45:26 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/21 14:56:12 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/23 10:19:50 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(int	c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }

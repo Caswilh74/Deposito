@@ -1,36 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 13:27:47 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/27 13:54:26 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/23 10:21:22 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/23 14:12:45 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putstr(char	*str)
+void	ft_bzero(void *s, size_t n)
 {
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		i++;
-	}
-	write(1, str, i);
+	ft_memset(s, 0, n);
 }
-/*
-int	main()
-{
-	char *str;
-	
-	str = "Hello Evaluator";
-	ft_putstr(str);
-	return (0);
-}
-*/

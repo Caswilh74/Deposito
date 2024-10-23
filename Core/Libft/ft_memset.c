@@ -1,30 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet2.c                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/17 16:47:31 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/07/17 17:25:14 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/21 15:14:40 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/23 13:31:04 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+#include <string.h>
 
-void	ft_print_reverse_alphabet(void)
+void	ft_memset(void *ptr, int c, size_t len)
 {
-void	ft_putchar(char r);
-	char r = 122;
-
-	while (r >= 97)
+	unsigned char	*tmp_ptr;
+	
+	tmp_ptr = (unsigned char *) ptr;
+	
+	while (len > 0)
 	{
-		write(1, &r, 1);
-		r--;
+		*(tmp_ptr++) = (unsigned char) c;
+		len--;
 	}
 }
-int		main(void)
+/*
+int	main()
 {
-	ft_print_reverse_alphabet();
-	return 0;
+	char str[20] = "Hello, World!";
+	printf("Original String: %s\n", str);
+	
+	ft_memset(str, 'G', 5);
+	printf("Modified String: %s\n", str);
+	return (0);
 }
