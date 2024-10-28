@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 13:08:39 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/24 15:37:21 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/23 16:33:11 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/23 17:18:18 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/**
- * @brief Checks if a character is alphabetic (a-z) or (A-Z)
- * (comparing the decimal value with ASCII).
- * 
- * @param c Character to check.
- * @return int Returns 1 if the condition is true, 0 on false.
- */
-int	ft_isalpha(int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	return ((c >= 65 && c <= 90) || (c >= 97 && c <= 122));
+	char		*last;
+	char		find;
+	size_t		i;
+
+	last = (char *)s;
+	find = (char)c;
+	i = ft_strlen(s);
+	
+	while (i > 0)
+	{
+		if (last[i] == find)
+			return (last + i);
+		i--;
+	}
+	if (last[i] == find)
+		return (last);
+	return (NULL);
 }

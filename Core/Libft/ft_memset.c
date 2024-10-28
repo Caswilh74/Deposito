@@ -6,12 +6,11 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:14:40 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/23 13:31:04 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/24 15:36:52 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
 
 void	ft_memset(void *ptr, int c, size_t len)
 {
