@@ -6,37 +6,28 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 14:56:12 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/22 16:04:08 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:00:20 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	char			*s;
-	char			*src_start;
-	unsigned int	dst_length;
-	unsigned int	remaining;
+	size_t	dest_len;
+	size_t	src_len;
+	size_t	space_left;
 
-	s = dst;
-	src_start = src;
-	remaining = dstsize;
-	while (remaining-- != 0 && *s != '\0')
-		s++;
-	dst_length = s - dst;
-	remaining = dstsize - dst_length;
-	if (remaining == 0)
-		return (dst_length + ft_strlen(src));
-	while (*src != '\0')
-	{
-		if (remaining > 1)
-		{
-			*s++ = *src;
-			remaining--;
-		}
-		src++;
-	}
-	*s = '\0';
-	return (dst_length + (src - src_start));
+	src_len = ft_strlen(src);
+	if (!dest && !size)
+		return (src_len);
+	dest_len = ft_strlen(dest);
+	if (size <= dest_len)
+		return (src_len + size);
+	space_left = size - dest_len - 1;
+	dest += dest_len;
+	while (space_left-- > 0 && *src)
+		*dest++ = *src++;
+	*dest = '\0';
+	return (dest_len + src_len);
 }

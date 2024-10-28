@@ -6,19 +6,18 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 11:21:43 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/22 11:23:25 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/28 14:44:58 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 65 && c <= 90)
-		{
-			c += 32;
-		}
+	{
+		c += 32;
+	}
 	return (c);
 }
 /*

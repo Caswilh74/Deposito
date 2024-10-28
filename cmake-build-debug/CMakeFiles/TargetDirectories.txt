@@ -1,3 +1,0 @@
-/home/gcarvalh/42Luxembourg/cmake-build-debug/CMakeFiles/42Luxembourg.dir
-/home/gcarvalh/42Luxembourg/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/gcarvalh/42Luxembourg/cmake-build-debug/CMakeFiles/rebuild_cache.dir

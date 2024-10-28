@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 15:14:40 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/24 15:36:52 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/28 15:03:25 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 void	ft_memset(void *ptr, int c, size_t len)
 {
 	unsigned char	*tmp_ptr;
-	
+
 	tmp_ptr = (unsigned char *) ptr;
-	
 	while (len > 0)
 	{
 		*(tmp_ptr++) = (unsigned char) c;
 		len--;
 	}
 }
+
 /*
 int	main()
 {
@@ -34,3 +34,4 @@ int	main()
 	printf("Modified String: %s\n", str);
 	return (0);
 }
+*/
