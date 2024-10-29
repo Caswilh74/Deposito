@@ -76,7 +76,7 @@ CFLAGS  = -Wall -Werror -Wextra -O3
 RM      = rm -f
 
 # Color Codes
-PINK = \033[38;2;255;105;180m
+Ciano = \e[1;96m
 RESET = \033[0m
 
 ##############################################
@@ -85,12 +85,12 @@ RESET = \033[0m
 
 # Compile .c files into .o files
 .c.o:
-	@echo "$(PINK)Compiling $<...$(RESET)"
+	@echo "$(Ciano)Compiling $<...$(RESET)"
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INCS)
 
 # Link all object files into the library archive
 $(NAME): $(OBJS)
-	@echo "$(PINK)Creating library $(NAME)...$(RESET)"
+	@echo "$(Ciano)Creating library $(NAME)...$(RESET)"
 	$(LIBC) $@ $^
 
 ##############################################
@@ -102,12 +102,12 @@ all: $(NAME)
 
 # Bonus target, includes additional linked list functions
 bonus: $(OBJS) $(BONUS_OBJS)
-	@echo "$(PINK)Adding bonus files to $(NAME)...$(RESET)"
+	@echo "$(Ciano)Adding bonus files to $(NAME)...$(RESET)"
 	$(LIBC) $(NAME) $(OBJS) $(BONUS_OBJS)
 
 # Create shared library
 so:
-	@echo "$(PINK)Creating shared library libft.so...$(RESET)"
+	@echo "$(Ciano)Creating shared library libft.so...$(RESET)"
 	$(CC) -nostartfiles -fPIC ${CFLAGS} ${SRCS}
 	$(CC) -nostartfiles -shared -o libft.so ${OBJS} $(BONUS_OBJS)
 
@@ -117,12 +117,12 @@ so:
 
 # Remove object files
 clean:
-	@echo "$(PINK)Cleaning up object files...$(RESET)"
+	@echo "$(Ciano)Cleaning up object files...$(RESET)"
 	$(RM) $(OBJS) $(BONUS_OBJS)
 
 # Full clean: remove library files as well
 fclean: clean
-	@echo "$(PINK)Removing $(NAME) and libft.so...$(RESET)"
+	@echo "$(Ciano)Removing $(NAME) and libft.so...$(RESET)"
 	$(RM) $(NAME)
 	$(RM) libft.so
 

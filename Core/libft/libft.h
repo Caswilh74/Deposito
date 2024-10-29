@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/21 13:37:11 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/28 17:25:58 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/10/29 14:12:59 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stddef.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdlib.h>
 
 /* Character classification functions */
 int		ft_isalpha(int c); // Checks if a character is alphabetic.
@@ -66,11 +67,12 @@ int		ft_atoi(const char *str);
 /* Memory manipulation functions */
 void	ft_bzero(void *s, size_t n);
 // Sets n bytes of memory to zero.
-void	ft_memset(void *ptr, int c, size_t len);
+void	*ft_memset(void *ptr, int c, size_t len);
 // Fills a block of memory with a given value.
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 // Copies memory from one location to another.
-void	*ft_memmove(void *dst, const void *src, size_t len); // Copies memory,
+void	*ft_memmove(void *dst, const void *src, size_t len);
+// Copies memory,
 void	*ft_memchr(const void *s, int c, size_t n);
 // Finds the first occurrence of a character in a memory block.
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -81,10 +83,37 @@ void	*ft_calloc(size_t nmemb, size_t size);
 /* Additional functions */
 void	ft_putchar_fd(char c, int fd);
 // Writes a character to a file descriptor.
-void	ft_putstr_fd(char *s, int fd); // Writes a string to a file descriptor.
+void	ft_putstr_fd(char *s, int fd);
+// Writes a string to a file descriptor.
 void	ft_putendl_fd(char *s, int fd);
 // Writes a string followed by a newline to a file descriptor.
 void	ft_putnbr_fd(int n, int fd);
 // Writes an integer to a file descriptor.
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+/* Bonus Functions */
+void	ft_lstadd_back(t_list **lst, t_list *new);
+// Adds a new element to the end of a linked list.
+void	ft_lstadd_front(t_list **lst, t_list *new);
+// Adds a new element to the beginning of a linked list.
+void	ft_lstclear(t_list **lst, void (*del)(void*));
+// Clears all elements from a linked list, using a given delete function.
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+// Deletes a single element from a linked list using a delete function.
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+// Iterates through a linked list, applying a function to each element.
+t_list	*ft_lstlast(t_list *lst);
+// Returns the last element of a linked list.
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+// Creates a new list by applying a function to each element of an list.
+t_list	*ft_lstnew(void	*content);
+// Creates a new list element with given content.
+int		ft_lstsize(t_list *lst);
+// Returns the number of elements in a linked list.
 
 #endif

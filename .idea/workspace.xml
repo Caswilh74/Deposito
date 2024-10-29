@@ -3,9 +3,9 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
-  <component name="CMakePresetLoader"><![CDATA[{
-  "useNewFormat": true
-}]]></component>
+  <component name="CMakePresetLoader">{
+  &quot;useNewFormat&quot;: true
+}</component>
   <component name="CMakeProjectFlavorService">
     <option name="flavorId" value="CMakePlainProjectFlavor" />
   </component>
@@ -13,9 +13,7 @@
     <option name="reloaded" value="true" />
   </component>
   <component name="CMakeRunConfigurationManager">
-    <generated>
-      <config projectName="42Luxembourg" targetName="42Luxembourg" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings">
     <configurations>
@@ -24,16 +22,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9483cc3a-4b5c-457e-b23c-633762c604cc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Core/Libft/ft_atoi.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/C/C06/ex03/t_sort_params.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Libft/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_isalpha.c" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Libft/ft_isalpha.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_atoi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_bzero.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_calloc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_isalnum.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_isalpha.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_isascii.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_isdigit.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_isprint.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_itoa.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_memchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_memcmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_memcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_memmove.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_memset.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_putchar_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_putendl_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_putnbr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_putstr_fd.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_split.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strdup.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_striteri.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strjoin.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strlcat.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strlcpy.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strlen.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strmapi.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strncmp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strnstr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strrchr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_strtrim.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_substr.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_tolower.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/ft_toupper.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Core/Libft/libft.h" beforeDir="false" afterPath="$PROJECT_DIR$/Core/Libft/libft.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,16 +73,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Core/Libft/ft_atoi.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Libft/ft_bzero.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Libft/ft_memset.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Core/Libft/libft.h" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
     <option name="minorVersion" value="2.2" />
     <option name="productBranch" value="Classic" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2nqE4WhVLX94bgYsbX4U5X3MOs8" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,17 +106,16 @@
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="42Luxembourg" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="42Luxembourg" TARGET_NAME="42Luxembourg" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="42Luxembourg" RUN_TARGET_NAME="42Luxembourg">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -99,10 +130,16 @@
       <option name="presentableId" value="Default" />
       <updated>1729692014876</updated>
       <workItem from="1729692016252" duration="216000" />
+      <workItem from="1730196690499" duration="749000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
   </component>
 </project>

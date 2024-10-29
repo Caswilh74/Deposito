@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/21 15:14:40 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/10/28 15:03:25 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/29 10:21:36 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/29 10:22:03 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memset(void *ptr, int c, size_t len)
+t_list	*ft_lstnew(void	*content)
 {
-	unsigned char	*tmp_ptr;
+	t_list	*new_elem;
 
-	tmp_ptr = (unsigned char *) ptr;
-	while (len > 0)
-	{
-		*(tmp_ptr++) = (unsigned char) c;
-		len--;
-	}
+	new_elem = (t_list *)malloc(sizeof(t_list));
+	if (!new_elem)
+		return (NULL);
+	new_elem->content = content;
+	new_elem->next = NULL;
+	return (new_elem);
 }
-
-/*
-int	main()
-{
-	char str[20] = "Hello, World!";
-	printf("Original String: %s\n", str);
-	
-	ft_memset(str, 'G', 5);
-	printf("Modified String: %s\n", str);
-	return (0);
-}
-*/
