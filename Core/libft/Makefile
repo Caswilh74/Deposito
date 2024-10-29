@@ -134,3 +134,7 @@ re: fclean all
 ##############################################
 
 .PHONY: all bonus so clean fclean re
+
+so:
+	$(CC) -nostartfiles -fPIC ${CFLAGS} ${SRCS}
+	$(CC) -nostartfiles -shared -o libft.so ${OBJS} $(BONUS_OBJS)
