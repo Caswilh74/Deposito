@@ -1,0 +1,116 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/11/14 14:56:10 by gcarvalh          #+#    #+#              #
+#    Updated: 2024/11/14 15:07:31 by gcarvalh         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Base Sources
+
+SRCS = ft_printf.c \
+       ft_put_characters.c \
+       ft_put_numbers.c
+
+    SRCS: This variable holds the list of source files (with .c extensions) that need to be compiled to create the object files. Each .c file is separated by a space, and the backslashes (\) are used to continue the line for readability.
+
+Base Objects
+
+OBJS = $(SRCS:.c=.o)
+
+    OBJS: This variable uses a substitution reference to create a list of object files (.o). It takes each .c file in the SRCS list and changes its extension to .o, which represents the compiled object file. For example, ft_printf.c becomes ft_printf.o.
+
+Compilation Variables
+
+NAME = libftprintf.a
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -g
+INCS = -I .
+AR = ar crs
+RM = rm -rf
+
+    NAME: The name of the final output file after the compilation and archiving process. In this case, it's a static library file named libftprintf.a.
+    CC: The compiler to be used. Here, it's set to gcc, which is the GNU C Compiler.
+    CFLAGS: Compiler flags that control the behavior of gcc.
+        -Wall: Enables all basic warnings.
+        -Werror: Treats warnings as errors, meaning the compilation will fail if there are any warnings.
+        -Wextra: Enables extra warning messages for potentially problematic code.
+        -g: Adds debugging information (useful for debugging with gdb or similar tools).
+    INCS: Specifies where to find header files. -I . tells the compiler to look for header files in the current directory (the . represents the current directory).
+    AR: The command to create an archive library. ar crs is used to create a static library, where:
+        c creates the archive.
+        r inserts the files into the archive.
+        s indexes the archive (creates the symbol table for faster linking).
+    RM: The command to remove files. rm -rf is used to forcefully remove files or directories without confirmation (used here for cleaning up object files and the library).
+
+Color Codes
+
+PINK = \033[38;2;255;105;180m
+RESET = \033[0m
+
+    PINK: This sets a custom color (pink) for terminal output using ANSI escape codes. \033[38;2;255;105;180m is the escape sequence for the desired pink color.
+    RESET: Resets the color back to the default after colored text is output. This ensures that subsequent terminal text doesn't remain pink.
+
+Compilation Rules
+
+.c.o:
+		@echo "$(PINK)Compiling $<...$(RESET)"
+		$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
+
+    .c.o: This is a pattern rule. It tells make how to convert a .c file into an .o object file.
+        $<: Refers to the first prerequisite (the .c file being compiled).
+        $@: Refers to the target file (the .o file being created).
+    The @ symbol before the echo command prevents the command from being printed to the terminal, keeping the output clean.
+    The command $(CC) $(CFLAGS) -c $< -o $@ $(INCS) compiles the source file ($<) with the specified flags ($(CFLAGS)), generating an object file ($@).
+    The $(INCS) option ensures that the current directory is searched for header files.
+
+$(NAME): $(OBJS)
+		@echo "$(PINK)Creating base library $(NAME)...$(RESET)"
+		$(AR) $@ $^
+
+    $(NAME): $(OBJS): This rule tells make how to create the target library ($(NAME)), which is the static library libftprintf.a. It depends on the object files ($(OBJS)), meaning that make will first compile the object files before creating the library.
+    $^: Refers to all the prerequisites, which in this case are the object files ($(OBJS)).
+    The $(AR) $@ $^ command creates the static library using ar crs, inserting all the object files into the library $(NAME).
+
+Main Commands
+
+all: $(NAME)
+
+    all: This is the default target. When you run make without specifying a target, it will execute the all rule, which depends on $(NAME) (the library file). So it will trigger the process of compiling the sources and creating the library.
+
+Cleaning Commands
+
+clean:
+		@echo "$(PINK)Cleaning up object files...$(RESET)"
+		$(RM) $(OBJS)
+
+    clean: This rule removes the object files ($(OBJS)), which are the .o files generated during compilation. The command $(RM) $(OBJS) uses rm -rf to delete the object files. The @ symbol prevents the command from being echoed to the terminal.
+
+fclean: clean
+		@echo "$(PINK)Removing $(NAME)...$(RESET)"
+		$(RM) $(NAME)
+
+    fclean: This is a more aggressive cleaning rule. It first runs the clean target (to remove object files) and then deletes the final library file ($(NAME)). This is useful if you want to completely clean up the project, including the static library.
+
+re: fclean all
+
+    re: This rule performs a "rebuild". It first runs fclean (which deletes everything) and then runs all (which rebuilds the static library from scratch).
+
+Phony Targets
+
+.PHONY: all clean fclean re
+
+    .PHONY: This declares that all, clean, fclean, and re are "phony" targets, meaning they aren't associated with actual files. This ensures that make will always run these rules, even if a file with the same name as the target exists. This is important to prevent make from being confused by existing files that could match these target names.
+
+Summary of Targets:
+
+    all: Compiles the program and creates the static library libftprintf.a.
+    clean: Deletes the object files (.o files).
+    fclean: Deletes both object files and the static library (libftprintf.a).
+    re: Removes all files (using fclean) and rebuilds the library from scratch.
+
+Each rule and variable is designed to streamline the build process, making it easy to compile, clean, and rebuild the project. The use of colors in @echo provides a more user-friendly and visually distinct output.
