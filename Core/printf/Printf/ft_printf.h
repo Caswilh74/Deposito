@@ -6,12 +6,12 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 15:27:52 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/11/08 08:07:40 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/11/20 14:00:30 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
 /*
 ** ==========================================================
@@ -32,6 +32,6 @@ void	ft_put_hex_count(unsigned long ptr, const char *hex_digits, int *count);
 ** ==========================================================
 */
 
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 
 #endif //FT_PRINTF_H

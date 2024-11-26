@@ -6,7 +6,7 @@
 #    By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/06 15:27:56 by gcarvalh          #+#    #+#              #
-#    Updated: 2024/11/08 08:07:57 by gcarvalh         ###   ########.fr        #
+#    Updated: 2024/11/21 11:01:07 by gcarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ RM			= rm -rf
 
 # Color Codes
 # ============================================
-PINK 		= \033[38;2;255;105;180m
+Ciano 		= Ciano = \e[1;96m
 RESET 		= \033[0m
 
 ##############################################
@@ -39,12 +39,12 @@ RESET 		= \033[0m
 
 # Compile .c files into .o files
 .c.o:
-		@echo "$(PINK)Compiling $<...$(RESET)"
+		@echo "$(Ciano)Compiling $<...$(RESET)"
 		$(CC) $(CFLAGS) -c $< -o $@ $(INCS)
 
 # Link all base object files into the base library archive
 $(NAME): $(OBJS)
-		@echo "$(PINK)Creating base library $(NAME)...$(RESET)"
+		@echo "$(Ciano)Creating base library $(NAME)...$(RESET)"
 		$(AR) $@ $^
 
 ##############################################
@@ -60,12 +60,12 @@ all: $(NAME)
 
 # Remove object files
 clean:
-		@echo "$(PINK)Cleaning up object files...$(RESET)"
+		@echo "$(Ciano)Cleaning up object files...$(RESET)"
 		$(RM) $(OBJS)
 
 # Full clean: remove library files as well
 fclean: clean
-		@echo "$(PINK)Removing $(NAME)...$(RESET)"
+		@echo "$(Ciano)Removing $(NAME)...$(RESET)"
 		$(RM) $(NAME)
 
 # Rebuild everything from scratch
