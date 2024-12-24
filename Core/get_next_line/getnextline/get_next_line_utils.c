@@ -6,22 +6,12 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:30:39 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/11/15 08:21:57 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/12/12 11:26:39 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "get_next_line.h"
 
-/**
- * Locates the first character occurrence in a string
- *
- * @param str String to locate c on
- * @param c Character to locate
- * @return Returns a pointer to the first occurrence
- * of c in str,\n OR null if c is not found.\n
- * IF c is '\0' returns a pointer to the null-terminating byte.
- */
 char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
@@ -35,13 +25,6 @@ char	*ft_strchr(const char *str, int c)
 	return (NULL);
 }
 
-/**
- * Counts the length of the given string.
- *
- * @param s String to get size of
- * @return Returns string size or
- * seg fault if the pointer is null
- */
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;
@@ -52,15 +35,6 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/**
- * Fills the first 'n' bytes of the area pointed by 's'
- * with the given 'c' character.
- *
- * @param s Pointer to memory area
- * @param c Character to set
- * @param n Number of bytes to set
- * @return Returns the given Address
- */
 void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t	i;
@@ -71,14 +45,6 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/**
- * Allocates memory for an array of pointers.
- *
- * @param nmemb Number of elements
- * @param size Size of each element
- * @return Returns newly allocated memory,\n
- * Or NULL on overflow or failed allocation.
- */
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
@@ -94,13 +60,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	return (ptr);
 }
 
-/**
- * Concatenates two strings into a newly allocated string.
- *
- * @param s1 First string.
- * @param s2 Second string.
- * @return Newly allocated concatenated string
- */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*join;

@@ -6,10 +6,9 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/14 15:30:30 by gcarvalh          #+#    #+#             */
-/*   Updated: 2024/11/15 08:19:04 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2024/12/11 12:04:56 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
