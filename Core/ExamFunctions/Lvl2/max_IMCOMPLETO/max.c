@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_cspn.c                                         :+:      :+:    :+:   */
+/*   max.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:42:57 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/01/30 09:47:56 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/01/30 11:13:01 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/01/30 11:14:00 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t ft_strcspn(const char *s, const char *reject)
+int	max(int *tab, unsigned int len)
 {
-	size_t count = 0;
-	size_t i = 0;
-	
-	while(*s)
-	{
-		while(reject[i] && *s != reject[i])
-			i++;
-		if(reject[i] != '\0')
-			return(count);
-		i = 0;
-		count++;
-		s++; 
-	}
-	return(count);
+	int	result;
+	unsigned int i = 0;
+
+	if(len == 0)
+		return(0);
+	result = tab[i];
+	while
 }

@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_cspn.c                                         :+:      :+:    :+:   */
+/*   str_rev.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:42:57 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/01/30 09:47:56 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/01/30 09:48:50 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/01/30 10:05:50 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-size_t ft_strcspn(const char *s, const char *reject)
+char	*ft_strrev(char *str)
 {
-	size_t count = 0;
-	size_t i = 0;
-	
-	while(*s)
+	int	j = -1;
+	int	i = 0;
+	char	temporary;
+
+	while(str[i])
+		i++;
+	while(++j < i / 2)
 	{
-		while(reject[i] && *s != reject[i])
-			i++;
-		if(reject[i] != '\0')
-			return(count);
-		i = 0;
-		count++;
-		s++; 
+		temporary = str[j];
+		str[j] = str[i - 1 - j];
+		str[i - 1 - j] = temporary;
 	}
-	return(count);
+	return(str);
 }

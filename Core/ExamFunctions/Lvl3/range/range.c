@@ -1,31 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   str_cspn.c                                         :+:      :+:    :+:   */
+/*   range.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:42:57 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/01/30 09:47:56 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/01/30 14:42:55 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/01/30 14:46:44 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <stdlib.h>
 
-size_t ft_strcspn(const char *s, const char *reject)
+int	*ft_range(int start, int end)
 {
-	size_t count = 0;
-	size_t i = 0;
-	
-	while(*s)
+	int	i = 0;
+	int len = abs((end - start)) + 1;
+	int	*res = (int*)malloc(sizeof(int)*len);
+
+	while(i < len)
 	{
-		while(reject[i] && *s != reject[i])
+		if (start < end)
+		{
+			res[i] = start;
+			start++;
 			i++;
-		if(reject[i] != '\0')
-			return(count);
-		i = 0;
-		count++;
-		s++; 
+		}
+		else
+		{
+			res[i] = start;
+			start--;
+			i++;
+		}
 	}
-	return(count);
+	return(res);
 }
