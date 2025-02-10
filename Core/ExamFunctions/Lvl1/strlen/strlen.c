@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_bits.c                                       :+:      :+:    :+:   */
+/*   strlen.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:37:35 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/10 18:03:44 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/02/10 17:53:28 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/10 17:56:02 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Assignment name  : print_bits
-Expected files   : print_bits.c
-Allowed functions: write
+/*Assignment name  : ft_strlen
+Expected files   : ft_strlen.c
+Allowed functions:
 --------------------------------------------------------------------------------
 
-Write a function that takes a byte, and prints it in binary WITHOUT A NEWLINE
-AT THE END.
+Write a function that returns the length of a string.
 
 Your function must be declared as follows:
 
-void	print_bits(unsigned char octet);
+int	ft_strlen(char *str);*/
 
-Example, if you pass 2 to print_bits, it will print "00000010"
-#include <unistd.h>*/
-
-void	print_bits(unsigned char octet)
+int	ft_strlen(char *str)
 {
-	int	i = 8;
-	unsigned char bit;
-	
-	while (i--)
-	{
-		bit = (octet >> i & 1) + '0';
-		write(1, &bit, 1);
-	}
+	int	i = 0;
+	while (str[i] != '\0')
+		i++;
+	return(i);
 }
