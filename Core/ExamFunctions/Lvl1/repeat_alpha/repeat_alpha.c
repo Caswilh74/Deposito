@@ -6,31 +6,10 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/28 14:40:48 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/10 17:48:38 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/02/11 10:47:47 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*Expected files   : repeat_alpha.c
-Allowed functions: write
---------------------------------------------------------------------------------
-
-Write a program called repeat_alpha that takes a string and display it
-repeating each alphabetical character as many times as its alphabetical index,
-followed by a newline.
-
-'a' becomes 'a', 'b' becomes 'bb', 'e' becomes 'eeeee', etc...
-
-Case remains unchanged.
-
-If the number of arguments is not 1, just display a newline.
-
-Examples:
-
-$>./repeat_alpha "abc"
-abbccc
-$>./repeat_alpha "Alex." | cat -e
-Alllllllllllleeeeexxxxxxxxxxxxxxxxxxxxxxxx.$
-#include <unistd.h>*/
 
 int	get_index(char c)
 {

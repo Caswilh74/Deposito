@@ -6,26 +6,9 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 10:34:13 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/10 17:51:35 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/02/11 10:48:34 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*Assignment name  : rotone
-Expected files   : rotone.c
-Allowed functions: write
---------------------------------------------------------------------------------
-
-Write a program that takes a string and displays it, replacing each of its
-letters by the next one in alphabetical order.
-'z' becomes 'a' and 'Z' becomes 'A'. Case remains unaffected.
-The output will be followed by a \n.
-If the number of arguments is not 1, the program displays \n.
-Example:
-$>./rotone "abc"
-bcd
-$>./rotone "Les stagiaires du staff ne sentent pas toujours tres bon." | cat -e
-Mft tubhjbjsft ev tubgg of tfoufou qbt upvkpvst usft cpo.$
-#include <unistd.h>*/
 
 void	ft_putchar(char c)
 {
