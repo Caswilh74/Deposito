@@ -26,8 +26,6 @@ int	ft_strncmp(char *s1, char *s2, int n)
 }
 
 
-#include "libft.h"
-
 void	ft_putstr_fd(char *s, int fd)
 {
 	if(NULL == s || fd < 0)
