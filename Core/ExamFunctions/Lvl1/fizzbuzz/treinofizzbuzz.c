@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_print.c                                        :+:      :+:    :+:   */
+/*   treinofizzbuzz.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 10:17:49 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/11 15:23:50 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/02/11 14:24:08 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/11 14:31:03 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
- 
-char	*rev_print(char *str)
+void	write_number(int	n)
 {
-	int	i = 0;
-	while(str[i])
-		i++;
-	while(--i >= 0)
-		write(1, &str[i], 1);
-	write(1, "\n", 1);
-	return(str);
+	char	str[10] = "0123456789";
+	if (n > 9)
+		write_number(n / 10);
+	write(1, &str[n % 10], 1);	
 }
 
-int	main(int ac, char **av)
+int	main()
 {
-	if (ac == 2)
-		rev_print(av[1]);
-	else
+	int	i = 1;
+	while (i <= 100)
+	{
+		if (i % 15 == 0)
+			write(1, "fizzbuzz", 8);
+		else if (i % 3 == 0)
+			write(1, "fizz", 4);
+		else if (i % 5 == 0)
+			write(1, "buzz", 4);
+		else
+			write_number(i);
+		i++;
 		write(1, "\n", 1);
-	return(0);
+	}
 }
