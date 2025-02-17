@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vigde-ol <vigde-ol@student.42luxembou      +#+  +:+       +#+        */
+/*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 16:44:15 by vigde-ol          #+#    #+#             */
-/*   Updated: 2024/12/03 16:44:23 by vigde-ol         ###   ########.fr       */
+/*   Created: 2024/12/03 16:44:15 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/17 18:12:03 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	send_bit(pid_t server_pid, char bit)
 		kill(server_pid, SIGUSR1);
 	else if (bit == '0')
 		kill(server_pid, SIGUSR2);
-	usleep(42);
+	usleep(200);
 }
 
 void	send_char(pid_t server_pid, char c)

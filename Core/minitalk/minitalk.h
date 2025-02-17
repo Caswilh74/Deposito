@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   server.h                                           :+:      :+:    :+:   */
+/*   minitalk.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vigde-ol <vigde-ol@student.42luxembou      +#+  +:+       +#+        */
+/*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 17:08:01 by vigde-ol          #+#    #+#             */
-/*   Updated: 2024/12/03 17:08:14 by vigde-ol         ###   ########.fr       */
+/*   Created: 2024/12/03 17:08:01 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/17 18:12:03 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERVER_H
-# define SERVER_H
+#ifndef MINITALK_H
+# define MINITALK_H
 
 # include <signal.h>
 # include <unistd.h>

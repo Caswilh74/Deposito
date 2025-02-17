@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: vigde-ol <vigde-ol@student.42luxembou      +#+  +:+       +#+         #
+#    By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/12/03 16:44:40 by vigde-ol          #+#    #+#              #
-#    Updated: 2024/12/03 16:44:44 by vigde-ol         ###   ########.fr        #
+#    Created: 2024/12/03 16:44:40 by gcarvalh          #+#    #+#              #
+#    Updated: 2025/02/17 18:12:03 by gcarvalh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 

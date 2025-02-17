@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   server.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vigde-ol <vigde-ol@student.42luxembou>     +#+  +:+       +#+        */
+/*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/03 15:43:27 by vigde-ol          #+#    #+#             */
-/*   Updated: 2024/12/03 16:43:58 by vigde-ol         ###   ########.fr       */
+/*   Created: 2024/12/03 15:43:27 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/17 18:12:03 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "server.h"
+#include "minitalk.h"
 #include "ft_printf/ft_printf.h" // Inclua o cabeçalho do ft_printf
 
 t_message	g_msg = {0, 7};
