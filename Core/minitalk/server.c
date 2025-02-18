@@ -6,12 +6,12 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 15:43:27 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/17 18:12:03 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/02/18 14:37:41 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-#include "ft_printf/ft_printf.h" // Inclua o cabeçalho do ft_printf
+#include "ft_printf/ft_printf.h"
 
 t_message	g_msg = {0, 7};
 
@@ -53,7 +53,7 @@ int	main(void)
 	pid_t	pid;
 
 	pid = getpid();
-	ft_printf("Server PID: %d\n", pid); // Substituído por ft_printf
+	ft_printf("Server PID: %d\n", pid); 
 	setup_signal_handlers();
 	while (1)
 		pause();
