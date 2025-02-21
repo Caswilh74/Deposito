@@ -53,7 +53,7 @@ int	main(void)
 	pid_t	pid;
 
 	pid = getpid();
-	ft_printf("Server PID: %d\n", pid); 
+	ft_printf("Server PID: %d\n", pid);
 	setup_signal_handlers();
 	while (1)
 		pause();
