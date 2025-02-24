@@ -1,33 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rot_13.c                                           :+:      :+:    :+:   */
+/*   lcm.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 10:26:49 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/24 15:37:52 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/02/24 16:33:21 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/24 16:33:23 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int main(int ac, char **av)
+unsigned int	lcm(unsigned int a, unsigned int b)
 {
-	int	i;
+	unsigned int	n;
 
-	i = 0;
-	if (ac == 2)
+	if (a == 0 || b == 0)
+		return (0);
+	if (a >= b)
+		n = a;
+	else
+		n = b;
+	while (1)
 	{
-		while(av[1][i] != '\0')
-		{
-			if ((av[1][i] >= 'a' && av[1][i]<= 'm') || (av[1][i] >= 'A' && av[1][i]<= 'M'))
-				av[1][i] = av[1][i] + 13;
-			else if ((av[1][i] >= 'n' && av[1][i]<= 'z') || (av[1][i] >= 'N' && av[1][i]<= 'Z'))
-				av[1][i] = av[1][i] - 13;
-			write(1, &av[1][i], 1);
-			i++;
-		}
+		if (n % a == 0 && n % b == 0)
+			return (n);
+		n++;
 	}
-	write(1, "\n", 1);	
 }

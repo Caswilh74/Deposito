@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rot_13.c                                           :+:      :+:    :+:   */
+/*   sort_list.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 10:26:49 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/24 15:37:52 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/02/24 16:37:47 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/24 16:37:49 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int main(int ac, char **av)
+t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 {
-	int	i;
+	t_list	*start;
+	int	swap;
 
-	i = 0;
-	if (ac == 2)
+	if (!lst || !lst->next)
+		return;
+	start = lst;
+	while (lst && lst->next)
 	{
-		while(av[1][i] != '\0')
+		if ((*cmp)(lst->data, lst->next->data) == 0)//difference between (*cmp) and cmp
 		{
-			if ((av[1][i] >= 'a' && av[1][i]<= 'm') || (av[1][i] >= 'A' && av[1][i]<= 'M'))
-				av[1][i] = av[1][i] + 13;
-			else if ((av[1][i] >= 'n' && av[1][i]<= 'z') || (av[1][i] >= 'N' && av[1][i]<= 'Z'))
-				av[1][i] = av[1][i] - 13;
-			write(1, &av[1][i], 1);
-			i++;
+			swap = lst->data;
+			lst->data = lst->next->data;
+			lst->next->data = swap;
+			lst = start;//restart from the begging if there is a swap
 		}
+		else
+			lst = lst->next;
 	}
-	write(1, "\n", 1);	
+	return (start);
 }

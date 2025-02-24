@@ -1044,6 +1044,7 @@ unsigned int	lcm(unsigned int a, unsigned int b)
 			return (n);
 		n++;
 	}
+}
 
 //pgcd
 int	main(int ac, char **av)

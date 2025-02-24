@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rot_13.c                                           :+:      :+:    :+:   */
+/*   rstr_capitalizer.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 10:26:49 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/24 15:37:52 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/02/24 16:34:37 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/24 16:34:38 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	int	i;
+	int	i = 0;
+	int	j = 1;
 
-	i = 0;
-	if (ac == 2)
+	if (ac > 1)
 	{
-		while(av[1][i] != '\0')
+		while (av[j][i])
 		{
-			if ((av[1][i] >= 'a' && av[1][i]<= 'm') || (av[1][i] >= 'A' && av[1][i]<= 'M'))
-				av[1][i] = av[1][i] + 13;
-			else if ((av[1][i] >= 'n' && av[1][i]<= 'z') || (av[1][i] >= 'N' && av[1][i]<= 'Z'))
-				av[1][i] = av[1][i] - 13;
-			write(1, &av[1][i], 1);
-			i++;
+			i = 0;
+			while (av[j][i])
+			{
+				if (av[j][i] >= 'A' && av[j][i] <= 'Z')
+					av[j][i] = av[j][i] + 32;
+				if ((av[j][i] >= 'a' && av[j][i] <= 'z')
+					&& (av[j][i + 1] == ' ' || av[j][i + 1] == '\t'))
+					av[j][i] = av[j][i] - 32;
+				write(1, &av[j][i], 1);
+				i++;
+			}
+			write(1, "\n", 1);
+			j++;
 		}
 	}
-	write(1, "\n", 1);	
+	if (ac == 1)
+		write(1, "\n", 1);
+	return (0);
 }

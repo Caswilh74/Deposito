@@ -1,33 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rot_13.c                                           :+:      :+:    :+:   */
+/*   pgcd.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 10:26:49 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/24 15:37:52 by gcarvalh         ###   ########.fr       */
+/*   Created: 2025/02/24 16:34:12 by gcarvalh          #+#    #+#             */
+/*   Updated: 2025/02/24 16:34:13 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-	int	i;
+	int	a;
+	int	b;
+	int	c;
 
-	i = 0;
-	if (ac == 2)
+	if (ac == 3)
 	{
-		while(av[1][i] != '\0')
+		a = atoi(av[1]);
+		b = atoi(av[2]);
+		if (a > 0 && b > 0)
 		{
-			if ((av[1][i] >= 'a' && av[1][i]<= 'm') || (av[1][i] >= 'A' && av[1][i]<= 'M'))
-				av[1][i] = av[1][i] + 13;
-			else if ((av[1][i] >= 'n' && av[1][i]<= 'z') || (av[1][i] >= 'N' && av[1][i]<= 'Z'))
-				av[1][i] = av[1][i] - 13;
-			write(1, &av[1][i], 1);
-			i++;
+			while (b != 0)
+			{
+				c = b;
+				b = a % b;
+				a = c;
+			}
+			printf("%d", a);
 		}
 	}
-	write(1, "\n", 1);	
+	write(1, "\n", 1);
+	return (0);
 }
