@@ -10,7 +10,7 @@
 #                                                                              #
 # **************************************************************************** #
 
-NAME = server client
+NAME = server client			
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
