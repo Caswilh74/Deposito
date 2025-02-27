@@ -76,9 +76,5 @@ void ft_swap(int   *a,int   *b)
 
 int main(int ac, char **av)
 {
-    if (av[1][i] >= 'a' && av[1][i] <= 'z')
-        av[1][i] = (av[1][i] - 'a' + 1);
-    else if (av[1][i] >= 'A' && av[1][i] <= 'Z')
-        av[1][i] = (av[1][i] - 'A' + 1);
-    write(1)
+
 }
