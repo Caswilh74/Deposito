@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 14:35:11 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/28 16:36:06 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/02/28 16:44:25 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,23 +73,23 @@ typedef struct s_fractal
 	double	julia_y;
 }				t_fractal;
 
-int		ft_strncmp(char *s1, char *s2, int n);
-void	putstr_fd(char *s, int fd);
-double	atodbl(char *s);
+int			ft_strncmp(char *s1, char *s2, int n);
+void		putstr_fd(char *s, int fd);
+double		atodbl(char *s);
 
-void	fractal_init(t_fractal *fractal);
+void		fractal_init(t_fractal *fractal);
 
-void	fractal_render(t_fractal *fractal);
+void		fractal_render(t_fractal *fractal);
 
-double	map(double unscaled_num, double new_min, double new_max, \
-double old_min, double old_max);
+double		map(double unscaled_num, double new_min, double new_max, \
+		double old_min, double old_max);
 t_complex	sum_complex(t_complex z1, t_complex z2);
 t_complex	square_complex(t_complex z);
 
-int	key_handler(int keysym, t_fractal *fractal);
+int			key_handler(int keysym, t_fractal *fractal);
 
-int	close_handler(t_fractal *fractal);
-int	mouse_handler(int button, int x, int y, t_fractal *fractal);
-int	julia_track(int x, int y, t_fractal *fractal);
+int			close_handler(t_fractal *fractal);
+int			mouse_handler(int button, int x, int y, t_fractal *fractal);
+int			julia_track(int x, int y, t_fractal *fractal);
 
 #endif
