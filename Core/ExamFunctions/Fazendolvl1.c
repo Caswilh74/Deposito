@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   eufazendotudo.c                                    :+:      :+:    :+:   */
+/*   Fazendolvl1.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 19:26:53 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/26 19:26:53 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/02/27 17:12:08 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,54 @@ void ft_swap(int   *a,int   *b)
 */
 
 //repeat_alpha
+/*
+int    get_index(char c)
+{
+    if(c >= 'a' && c <= 'z')
+        return(c - 'a' + 1);
+    else if (c >= 'A' && c <= 'Z')
+        return(c - 'A' + 1);
+    return(0);
+}
+
+void    repeat_alpha(char *s)
+{
+    int count = 0;
+    while (*s)
+    {
+        if ((*s >= 'a' && *s<= 'z') || (*s >= 'A' && *s <= 'Z'))
+        {
+            count = get_index(*s);
+            while(i--)
+                write(1, &*s, 1);
+        }
+        else
+            write(1, &*s, 1);
+        s++;
+    }
+}
 
 int main(int ac, char **av)
 {
-
+    if (ac == 2)
+        repeat_alpha(av[1]);
+    write(1, "\n", 1);
 }
+*/
+//rev_print
+/*
+int main(int ac, char **av)
+{
+    int i = 0;
+    while (av[1][i])
+        i++;
+    i--;
+    while (av[1][i])
+    {
+        write(1, &av[1][i], 1);
+        i--;
+    }
+    write(1, "/n", 1);
+}
+*/
+//search_and_replace
