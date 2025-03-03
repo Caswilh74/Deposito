@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 19:26:53 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/27 17:12:08 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/02/28 18:36:56 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,3 +124,70 @@ int main(int ac, char **av)
 }
 */
 //search_and_replace
+/*
+int main(int ac, char **av)
+{
+    int i = 0;
+    if (ac == 4)
+    {
+        if ((av[2][0] >= 'a' && av[2][0] <= 'z') || (av[2][0] >= 'A' && av[2][0] <= 'Z') && av[2][1] == '\0')
+            if ((av[3][0] >= 'a' && av[3][0] <= 'z') || (av[3][0] >= 'A' && av[3][0] <= 'Z') && av[3][1] == '\0')
+            {
+                while (av[1][i])
+                {
+                    if (av[1][i] == av[2][0])
+                    {
+                        av[1][i] = av[3][0];
+                    }
+                    write(1, &av[1][i], 1);
+                    i++;
+                }
+            }
+    }
+    write(1, "\n", 1);
+}
+*/
+//strcpy
+/*
+char    *ft_strcpy(char *s1, char *s2)
+{
+    int i = 0;
+    while(s2[i] != '\0')
+    {
+        s1[i] = s2[i];
+        i++;
+    }
+    s1[i] = '\0';
+    return(s1);
+}
+*/
+//strlen
+/*
+int ft_strlen(char *str)
+{
+    int i = 0;
+    while (str[i])
+    {
+        i++;
+    }
+    return(i);
+}
+*/
+//ulstr
+/*
+int main(int ac, char **av)
+{
+    int i = 0;
+    if(ac == 2)
+        while(av[1][i])
+        {
+            if(av[1][i] >= 'a' && av[1][i] <= 'z')
+                av[1][i] -= 32;
+            else if(av[1][i] >= 'A' && av[1][i] <= 'Z')
+                av[1][i] += 32;
+            write(1, &av[1][i], 1);
+            i++;
+        }
+    write(1, "\n", 1);
+}
+*/

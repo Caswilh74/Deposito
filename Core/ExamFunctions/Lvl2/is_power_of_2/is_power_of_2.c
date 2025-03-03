@@ -6,13 +6,13 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 14:02:25 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/01/29 14:04:38 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/02 16:06:42 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	is_power_of_2(unsigned int n)
 {
-	if( n == 0)
+	if(n == 0)
 		return 0;
 	return(n &(n - 1)) == 0;
 }
