@@ -6,12 +6,12 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 19:26:53 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/28 18:36:56 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/04 16:53:10 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-//first word
+//first word - FACIL
 /*
 int main(int ac, char **av)
 {
@@ -30,7 +30,7 @@ int main(int ac, char **av)
 }
 */
 
-//fizzbuzz
+//fizzbuzz - FACIL
 /*
 void write_number(int    number)
 {
@@ -60,7 +60,7 @@ int main()
 }
 */
 
-//ft_swap
+//ft_swap - MUITO FACIL
 /*
 void ft_swap(int   *a,int   *b)
 {
@@ -72,7 +72,7 @@ void ft_swap(int   *a,int   *b)
 }
 */
 
-//repeat_alpha
+//repeat_alpha - FACIL MAS PRECISA LEMBRAR
 /*
 int    get_index(char c)
 {
@@ -107,7 +107,7 @@ int main(int ac, char **av)
     write(1, "\n", 1);
 }
 */
-//rev_print
+//rev_print - MUITO FACIL
 /*
 int main(int ac, char **av)
 {
@@ -123,7 +123,7 @@ int main(int ac, char **av)
     write(1, "/n", 1);
 }
 */
-//search_and_replace
+//search_and_replace - PRECISA REVER PRA LEMBRAR MAS FACIL
 /*
 int main(int ac, char **av)
 {
@@ -147,7 +147,7 @@ int main(int ac, char **av)
     write(1, "\n", 1);
 }
 */
-//strcpy
+//strcpy - MUITO FACIL
 /*
 char    *ft_strcpy(char *s1, char *s2)
 {
@@ -161,7 +161,7 @@ char    *ft_strcpy(char *s1, char *s2)
     return(s1);
 }
 */
-//strlen
+//strlen - MUITO FACIL 
 /*
 int ft_strlen(char *str)
 {
@@ -173,7 +173,7 @@ int ft_strlen(char *str)
     return(i);
 }
 */
-//ulstr
+//ulstr - MAIS FACIL DE TODOS
 /*
 int main(int ac, char **av)
 {

@@ -6,11 +6,11 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 16:30:10 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/24 16:30:12 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/04 15:40:33 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	atoi(char *s)
+int	ft_atoi(char *s)
 {
 	int	v = 0;
 	int	sign = 1;

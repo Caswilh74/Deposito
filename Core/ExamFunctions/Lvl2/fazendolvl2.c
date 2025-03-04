@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 18:37:27 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/03 19:31:12 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/04 16:58:35 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//alpha_mirror
+//alpha_mirror - FACIL LEMBRAR QUE 'A' + 'Z' - AV[1][i] E PRONTO
 /*
 int main(int ac, char **av)
 {
@@ -35,7 +35,7 @@ int main(int ac, char **av)
     return (0);
 }
 */
-//camel_to_snake
+//camel_to_snake - FACIL 
 /*
 int main(int ac, char **av)
 {
@@ -56,8 +56,8 @@ int main(int ac, char **av)
     write(1, "\n", 1);
 }
 */
-//do_op
-/*
+//do_op - FACIL APENAS LEMBRAR ---> printf("%d", (atoi(av[1]) + atoi(av[3])));
+
 int main(int ac, char **av)
 {
     if (ac == 4)
@@ -77,7 +77,7 @@ int main(int ac, char **av)
     return(0);
 }
 */
-//atoi
+//atoi - FACIL AGORA RSRS
 /*
 int ft_atoi(const char *str)
 {
@@ -97,7 +97,7 @@ int ft_atoi(const char *str)
     return(valor * sign);
 }
 */
-//strcmp
+//strcmp - MUITO FACIL
 /*
 int ft_strcmp(char *s1, char *s2)
 {
@@ -107,7 +107,7 @@ int ft_strcmp(char *s1, char *s2)
     return(s1[i] - s2[i]);
 }
 */
-//strcspn
+//strcspn - FACIL MAS NAO SEI, PRECISO REVER
 /*
 size_t ft_strcspn(const char *s, const char *reject)
 {
@@ -127,7 +127,7 @@ size_t ft_strcspn(const char *s, const char *reject)
     return(count);
 }
 */
-//strdup
+//strdup - NAO SEI
 /*
 char    *ft_strdup(char *src)
 {
@@ -161,7 +161,7 @@ int main(int ac. char **av)
     write(1, "\n", 1);
 }
 */
-//is_power_of_2
+//is_power_of_2 - DECORAR QUE SE N == 0 RETORNA 0 OU SENAO return(n &(n - 1)) == 0;
 /*
 int is_power_of_2(unsigned int n)
 {
@@ -170,7 +170,7 @@ int is_power_of_2(unsigned int n)
     return(n &(n - 1)) == 0;
 }
 */
-//last_word
+//last_word - FACIL
 /*
 int main(int ac, char **av)
 {
@@ -197,7 +197,7 @@ int main(int ac, char **av)
     return (0);
 }
 */
-//max
+//max - NAO SEI 
 /*
 int max(int* tab, unsigned int len)
 {
@@ -212,7 +212,7 @@ int max(int* tab, unsigned int len)
     return(max);
 }
 */
-//print_bits
+//print_bits - NAO SEI
 /*
 void    print_bits(unsigned char octet)
 {
@@ -226,7 +226,7 @@ void    print_bits(unsigned char octet)
     }
 }
 */
-//reverse_bits
+//reverse_bits - NAO SEI
 /*
 unsigned char   reverse_bits(unsigned char octet)
 {
@@ -241,7 +241,7 @@ unsigned char   reverse_bits(unsigned char octet)
     return(res);
 }
 */
-//snake_to_camel
+//snake_to_camel - FACIL
 /*
 int main(int ac, char **av)
 {
@@ -264,7 +264,7 @@ int main(int ac, char **av)
     return(0);
 }
 */
-//str_rev
+//str_rev - NAO SEI
 /*
 char    *ft_strrev(char *str)
 {
@@ -283,7 +283,7 @@ char    *ft_strrev(char *str)
     return(str);
 }
 */
-//swap_bits
+//swap_bits - MUITO FACIL
 /*
 unsigned char swap_bits(unsigned char octet)
 {
