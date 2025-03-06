@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 18:37:27 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/04 16:58:35 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/06 09:36:15 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ int main(int ac, char **av)
 }
 */
 //do_op - FACIL APENAS LEMBRAR ---> printf("%d", (atoi(av[1]) + atoi(av[3])));
-
+/*
 int main(int ac, char **av)
 {
     if (ac == 4)

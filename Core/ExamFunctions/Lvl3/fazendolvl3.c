@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 08:32:53 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/04 17:21:12 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/06 10:07:14 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -179,9 +179,27 @@ int ft_list_size(t_list *begin_list)
 }
 */
 //ft_range
-/*
+
 int *ft_range(int start, int end)
 {
     int i = 0;
-    int len = 
+    int len = abs((start - end)) + 1;
+    int *res = malloc(sizeof(int) * len);
+
+    while(i < len)
+    {
+        if(start - end)
+        {
+            res[i] = start;
+            start++;
+            i++;
+        }
+        else
+        {
+            res[i] = start;
+            start--;
+            i++;
+        }
+    }
+    return(res);
 }

@@ -6,7 +6,7 @@
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/28 14:34:14 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/02/28 14:56:36 by gcarvalh         ###   ########.fr       */
+/*   Updated: 2025/03/06 11:22:19 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,11 @@ int	mouse_handler(int button, int x, int y, t_fractal *fractal)
 {
 	if (button == Button4)
 	{
-		fractal->zoom *= 0.95;
+		fractal->zoom *= 1.95;
 	}
 	else if (button == Button5)
 	{
-		fractal->zoom *= 1.05;
+		fractal->zoom *= 1.95;
 	}
 	fractal_render(fractal);
 	return (0);
@@ -64,12 +64,17 @@ int	mouse_handler(int button, int x, int y, t_fractal *fractal)
 int	julia_track(int x, int y, t_fractal *fractal)
 {
 	if (!ft_strncmp(fractal->name, "julia", 5))
-	{
-		fractal->julia_x = (map(x, -2, +2, 0, WIDTH) * \
-							fractal->zoom) + fractal->shift_x;
-		fractal->julia_y = (map(y, +2, -2, 0, HEIGHT) * \
-							fractal->zoom) + fractal->shift_y;
-		fractal_render(fractal);
-	}
-	return (0);
+    {
+        t_limits old_limits_x = {-2, +2};
+        t_limits new_limits_x = {0, WIDTH};
+        
+        t_limits old_limits_y = {+2, -2};
+        t_limits new_limits_y = {0, HEIGHT};
+        
+        fractal->julia_x = (map(x, old_limits_x, new_limits_x) * fractal->zoom) + fractal->shift_x;
+        fractal->julia_y = (map(y, old_limits_y, new_limits_y) * fractal->zoom) + fractal->shift_y;
+        
+        fractal_render(fractal);
+    }
+    return (0);
 }
