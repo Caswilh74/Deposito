@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fizzbuzz.c                                         :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 09:58:52 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/06 14:39:32 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/24 15:20:38 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/29 14:47:06 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdlib.h>
 
-#include <unistd.h>
-
-void	ft_write_number(int	number)
+int	ft_atoi(const char *str)
 {
-	char	str[10] = "0123456789";
-	
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &str[number % 10], 1);
-}
+	int	result;
+	int	sign;
 
-int	main()
-{
-	int	i = 1;
-	
-	while (i <= 100)
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
+		str++;
+	sign = 1;
+	if (*str == '+' || *str == '-')
 	{
-		if (i % 15 == 0)
-			write(1, "fizzbuzz", 8);
-		else if (i % 3 == 0)
-			write(1, "fizz", 4);
-		else if (i % 5 == 0)
-			write(1, "buzz", 4);
-		else	
-			ft_write_number(i);
-		i++;
-		write(1, "\n", 1);
+		if (*str == '-')
+			sign *= -1;
+		str++;
 	}
+	result = 0;
+	while (ft_isdigit(*str))
+	{
+		result = result * 10 + (*str - '0');
+		str++;
+	}
+	return (result * sign);
 }

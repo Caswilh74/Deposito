@@ -1,42 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fizzbuzz.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 09:58:52 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/06 14:39:32 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/28 14:00:35 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/28 14:38:11 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <unistd.h>
-
-void	ft_write_number(int	number)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	str[10] = "0123456789";
-	
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &str[number % 10], 1);
-}
+	long	n_long;
 
-int	main()
-{
-	int	i = 1;
-	
-	while (i <= 100)
+	n_long = n;
+	if (n_long < 0)
 	{
-		if (i % 15 == 0)
-			write(1, "fizzbuzz", 8);
-		else if (i % 3 == 0)
-			write(1, "fizz", 4);
-		else if (i % 5 == 0)
-			write(1, "buzz", 4);
-		else	
-			ft_write_number(i);
-		i++;
-		write(1, "\n", 1);
+		ft_putchar_fd('-', fd);
+		n_long = -n_long;
 	}
+	if (n_long >= 10)
+	{
+		ft_putnbr_fd(n_long / 10, fd);
+	}
+	ft_putchar_fd('0' + (n_long % 10), fd);
 }

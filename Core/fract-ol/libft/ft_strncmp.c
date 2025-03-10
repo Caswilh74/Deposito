@@ -1,42 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fizzbuzz.c                                         :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 09:58:52 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/06 14:39:32 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/21 16:23:09 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/29 14:32:53 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <unistd.h>
-
-void	ft_write_number(int	number)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char	str[10] = "0123456789";
-	
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &str[number % 10], 1);
-}
+	size_t	i;
 
-int	main()
-{
-	int	i = 1;
-	
-	while (i <= 100)
+	if (!n)
+		return (0);
+	i = 0;
+	while (i < n - 1 && s1[i] && s2[i] && s1[i] == s2[i])
 	{
-		if (i % 15 == 0)
-			write(1, "fizzbuzz", 8);
-		else if (i % 3 == 0)
-			write(1, "fizz", 4);
-		else if (i % 5 == 0)
-			write(1, "buzz", 4);
-		else	
-			ft_write_number(i);
 		i++;
-		write(1, "\n", 1);
 	}
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

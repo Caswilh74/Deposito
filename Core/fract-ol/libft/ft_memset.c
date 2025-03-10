@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fizzbuzz.c                                         :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 09:58:52 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/06 14:39:32 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/21 15:14:40 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/29 14:32:22 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
-#include <unistd.h>
-
-void	ft_write_number(int	number)
+void	*ft_memset(void *ptr, int c, size_t len)
 {
-	char	str[10] = "0123456789";
-	
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &str[number % 10], 1);
-}
+	size_t	i;
 
+	i = 0;
+	while (i < len)
+		((unsigned char *)ptr)[i++] = (unsigned char)c;
+	return (ptr);
+}
+/*
 int	main()
 {
-	int	i = 1;
+	char str[20] = "Hello, World!";
+	printf("Original String: %s\n", str);
 	
-	while (i <= 100)
-	{
-		if (i % 15 == 0)
-			write(1, "fizzbuzz", 8);
-		else if (i % 3 == 0)
-			write(1, "fizz", 4);
-		else if (i % 5 == 0)
-			write(1, "buzz", 4);
-		else	
-			ft_write_number(i);
-		i++;
-		write(1, "\n", 1);
-	}
+	ft_memset(str, 'G', 5);
+	printf("Modified String: %s\n", str);
+	return (0);
 }
+*/

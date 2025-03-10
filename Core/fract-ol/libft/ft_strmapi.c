@@ -1,42 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fizzbuzz.c                                         :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gcarvalh <gcarvalh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 09:58:52 by gcarvalh          #+#    #+#             */
-/*   Updated: 2025/03/06 14:39:32 by gcarvalh         ###   ########.fr       */
+/*   Created: 2024/10/28 13:41:52 by gcarvalh          #+#    #+#             */
+/*   Updated: 2024/10/28 17:12:20 by gcarvalh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+#include <stdlib.h>
 
-#include <unistd.h>
-
-void	ft_write_number(int	number)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char	str[10] = "0123456789";
-	
-	if (number > 9)
-		ft_write_number(number / 10);
-	write(1, &str[number % 10], 1);
-}
+	char			*mapi;
+	unsigned int	i;
 
-int	main()
-{
-	int	i = 1;
-	
-	while (i <= 100)
+	if (!f || !s)
+		return (NULL);
+	mapi = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (!mapi)
+		return (NULL);
+	i = 0;
+	while (s[i])
 	{
-		if (i % 15 == 0)
-			write(1, "fizzbuzz", 8);
-		else if (i % 3 == 0)
-			write(1, "fizz", 4);
-		else if (i % 5 == 0)
-			write(1, "buzz", 4);
-		else	
-			ft_write_number(i);
+		mapi[i] = f(i, s[i]);
 		i++;
-		write(1, "\n", 1);
 	}
+	mapi[i] = '\0';
+	return (mapi);
 }
